@@ -1,0 +1,199 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --primaryColor: #3eae2c;
+  --secondaryColor: rgba(253, 216, 53, 1);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.PC {
+  display: unset;
+}
+
+.Mobile {
+  display: none;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: fixed; /*Make it ontop of everything else*/
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.active {
+ font-weight: bold;
+}
+
+.topnav a {
+  line-height: 15px;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 24px;
+  color: var(--black);
+  display: block;
+  padding: 0px 16px;
+}
+
+.topnav a:hover {
+  color: var(--primaryColor);
+  transition: 0.2s color linear;
+}
+
+.topnav img {
+  display: none;
+}
+
+table {
+  width: 45%;
+  border-collapse: collapse;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  left: 25%;
+  height: 65%;
+  top: 15%;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.2) ;
+  font-size: 1.3em;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-size: 100%;
+}
+
+input {
+  border: none;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+input:focus {
+  outline: none
+}
+#events-container {
+  display: grid;
+  columns: 1;
+  row-gap: 2%;
+  
+}
+
+.event {
+  display: grid;
+  background-color: white;
+  box-sizing: border-box;
+  border-style: solid;
+  border: 0.5% solid;
+  border-color: var(--primaryColor);
+  border-radius: 5%;
+  padding-left: 12px;
+  grid-template-columns: min-content;
+  grid-template-rows: min-content;
+  column-gap: 5%;
+}
+
+.event h3 {
+  color: var(--primaryColor);
+  font-size: 1.5em;
+  grid-column: 1 / span 2;
+  line-height: 5%;
+}
+.event p {
+  font-size: 1.2em;
+  display: inline;
+}
+
+.date-time {
+  color: var(--black)
+}
+
+.event img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+
+/* When the screen is smaller than 700px*/
+@media screen and (max-width: 650px) {
+  /* make a bottom nav bar 
+  to make it feel more like an app rather than website
+  for those on mobile */
+ 
+  .topnav {
+    background-color: rgba(255, 255, 255, 1);
+    top: unset;
+    bottom: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+  }
+
+  .topnav a {
+    text-align: center;
+    margin: 0px auto;
+    display: inline-block;
+    padding: 16px 0px;
+  }
+
+  .topnav p {
+    display: none;
+  }
+
+  .topnav img {
+    display: unset;
+    width: 35px;
+    height: 35px;
+  }
+
+  .PC {
+    display: none;
+  }
+
+  .Mobile {
+    display: unset;
+  }
+
+  #events-container {
+    padding-bottom: 60%; /*put space at bottom so it lookslike nav isnt covering anything at the end of the scroll on mobile*/
+  }
+
+  .event {
+    width: 100%;
+    /* background-repeat: repeat; */
+  }
+
+  .event img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+  /* change table properites to fit screen better */
+  table {
+    height: 70%;
+    left: auto;
+    width: 90%;
+    margin-left: 2%;
+    margin-right: 2%;  
+  }
+}
+
+@media screen and (max-width: 550px) {
+  table {
+    top: 10%;
+  }
+}
+
+
+
