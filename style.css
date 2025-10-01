@@ -91,7 +91,7 @@ input:focus {
 
 .event {
   display: grid;
-  background-color: white;
+  background-color: var(--primaryColor);
   box-sizing: border-box;
   border-style: solid;
   border: 0.5% solid;
