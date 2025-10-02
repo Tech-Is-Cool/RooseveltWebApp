@@ -82,6 +82,7 @@ input {
 input:focus {
   outline: none
 }
+
 #events-container {
   display: grid;
   columns: 1;
@@ -96,22 +97,30 @@ input:focus {
   border-style: solid;
   border: 0.5% solid;
   border-color: var(--primaryColor);
-  border-radius: 5%;
-  padding-left: 12px;
+  border-radius: 1%;
   grid-template-columns: min-content;
   grid-template-rows: min-content;
-  column-gap: 5%;
+  column-gap: 1%;
 }
 
 .event h3 {
-  color: white;
+  color: black;
+  background-color: var(--secondaryColor);
   font-size: 1.5em;
   grid-column: 1 / span 2;
-  line-height: 5%;
+  margin-top: 0.1%;
+  margin-bottom: 1%;
+  line-height: 300%;
+  text-align: center;
 }
 .event p {
   font-size: 1.2em;
   display: inline;
+  padding-left: 10%;
+}
+
+.description {
+  padding-left: 0%;
 }
 
 .date-time {
@@ -122,6 +131,7 @@ input:focus {
   max-height: 200px;
   object-fit: contain;
 }
+
 
 
 /* When the screen is smaller than 700px*/
@@ -166,7 +176,7 @@ input:focus {
   }
 
   #events-container {
-    padding-bottom: 60%; /*put space at bottom so it lookslike nav isnt covering anything at the end of the scroll on mobile*/
+    padding-bottom: 30%; /*put space at bottom so it lookslike nav isnt covering anything at the end of the scroll on mobile*/
   }
 
   .event {
@@ -178,6 +188,17 @@ input:focus {
   max-height: 150px;
   object-fit: contain;
 }
+
+  .description {
+    grid-column-start: 2;
+    grid-row: span 2;
+    align-self:end;
+  }
+
+  .date-time {
+    grid-row-start: 2;
+    vertical-align: bottom;
+  }
 
   /* change table properites to fit screen better */
   table {
@@ -194,6 +215,3 @@ input:focus {
     top: 10%;
   }
 }
-
-
-
