@@ -47,7 +47,7 @@ onSnapshot(q, (snapshot) => {
       item.innerHTML = `
         <h3 class="title">${data.title}</h3><img src="${data.imageUrl}" onerror="this.style.display='none'"> 
         <p class="description">${data.description}</p>
-        <p class="date-time"><b>${data.date.toDate().toLocaleString()}</b></p>
+        <p class="date-time"><b>${data.date.toDate().toLocaleString()}</b></p><p class="location">Location: ${data.location}</p>
         
       `;
     
