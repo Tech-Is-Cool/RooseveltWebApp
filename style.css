@@ -117,13 +117,20 @@ input:focus {
   font-size: 1.2em;
   display: inline;
   padding-left: 10%;
+  grid-colum-start: 1;
 }
 
 .description {
+  grid-column-start: 2;
   padding-left: 0%;
+  grid-row-start: 2;
+  grid-row: span 2;
 }
 
 .date-time {
+  order: 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
   color: var(--black)
 }
 
@@ -215,3 +222,6 @@ input:focus {
     top: 10%;
   }
 }
+
+
+
